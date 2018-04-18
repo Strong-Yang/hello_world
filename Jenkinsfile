@@ -3,18 +3,18 @@ pipeline {
   stages {
     stage('join in the dir') {
       steps {
-        sh '''cd /home/wlh/hello_world
+        sh '''pushed /home/wlh/hello_world
 '''
       }
     }
     stage('gcc') {
       steps {
-        sh 'gcc hello_world.c -o hello_world'
+        sh 'make'
       }
     }
     stage('run') {
       steps {
-        sh './hello_world'
+        sh './hello'
       }
     }
     stage('end') {
