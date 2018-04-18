@@ -13,6 +13,7 @@ pipeline {
     }
     stage('gcc') {
       steps {
+        sh 'cd hello_world'
         sh 'gcc hello_world.c -o hello_world'
       }
     }
