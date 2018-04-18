@@ -1,19 +1,24 @@
 pipeline {
   agent any
   stages {
+    stage('join the dir') {
+      steps {
+        sh 'cd ./hello_world'
+      }
+    }
     stage('gcc') {
       steps {
-        sh 'gcc hello_world -o hello_world'
+        sh 'gcc hello_world.c -o hello'
       }
     }
-    stage('run') {
+    stage('run ') {
       steps {
-        sh './hello_world'
+        sh './hello'
       }
     }
-    stage('end') {
+    stage('print') {
       steps {
-        echo 'test end'
+        echo 'success'
       }
     }
   }
