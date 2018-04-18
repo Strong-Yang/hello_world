@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('join in the dir') {
       steps {
-        sh '''/home/wlh/hello_world
+        sh '''cd /home/wlh/hello_world
 '''
       }
     }
