@@ -1,20 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('join in the dir') {
-      steps {
-        sh '''pushed /home/wlh/hello_world
-'''
-      }
-    }
     stage('gcc') {
       steps {
-        sh 'make'
+        sh 'gcc hello_world -o hello_world'
       }
     }
     stage('run') {
       steps {
-        sh './hello'
+        sh './hello_world'
       }
     }
     stage('end') {
