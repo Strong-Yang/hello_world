@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('join the dir') {
       steps {
-        sh 'cd ./hello_world'
+        sh 'cd ../hello_world'
       }
     }
     stage('gcc') {
